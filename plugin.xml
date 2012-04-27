@@ -1,0 +1,14 @@
+<plugin name='scala' version='0.6.4' grailsVersion='1.2 &gt; *'>
+  <author>Vaclav Pech, Domingo Suarez Torres</author>
+  <title>Scala Plugin</title>
+  <description>\
+Compiles Scala sources located under src/scala and src-java before grails kicks in with the grails compilation
+</description>
+  <documentation>http://grails.org/Scala+Plugin</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>UrlMappings</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>
