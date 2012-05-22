@@ -55,8 +55,12 @@ eventCompileStart = {GantBinding compileBinding ->
     ant.scalac(destdir: classesDirPath,
         classpathref: "scala.compile.classpath",
         encoding: scalaSrcEncoding) {
-      src(path: "${basedir}/src/java")
-      src(path: "${basedir}/src/scala")
+            if(new File("${basedir}/src/java").exists()) {
+                src(path: "${basedir}/src/java")
+            }
+            if(new File("${basedir}/src/scala").exists()) {
+                src(path: "${basedir}/src/scala")
+            }
     }
 
   } catch (Exception e) {
