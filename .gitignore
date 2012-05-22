@@ -4,3 +4,10 @@ target/
 web-app/css/
 web-app/images/
 web-app/js/
+*.iml
+*.ipr
+*.iws
+*.tmproj
+.classpath
+.project
+.settings/
