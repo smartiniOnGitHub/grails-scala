@@ -1,4 +1,6 @@
-web-app/css/errors.css
-web-app/css/mobile.css
-web-app/images/apple-touch-icon-retina.png
-web-app/images/apple-touch-icon.png
+*.zip
+plugin.xml
+target/
+web-app/css/
+web-app/images/
+web-app/js/
