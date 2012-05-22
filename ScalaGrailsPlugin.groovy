@@ -1,5 +1,5 @@
 class ScalaGrailsPlugin {
-	def version = "0.6.4" // added by set-version
+	def version = "0.6.5-SNAPSHOT" // added by set-version
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2 > *"
     // the other plugins this plugin depends on
@@ -22,4 +22,12 @@ Compiles Scala sources located under src/scala and src-java before grails kicks 
 
     // URL to the plugin's documentation
     def documentation = "http://grails.org/Scala+Plugin"
+    def license = "APACHE"
+    def organization = [ name: "", url: "" ]
+    def developers = [
+        [ name: "Vaclav Pech", email: "" ],
+        [ name: "Domingo Suarez Torres", email: "domingo.suarez@gmail.com" ]
+    ]
+    def issueManagement = [ system: "GITHUB", url: "https://github.com/vaclav/grails-scala/issues" ]
+    def scm = [ url: "https://github.com/vaclav/grails-scala" ]
 }
