@@ -35,8 +35,9 @@ grails.project.dependency.resolution = {
         I some Grails versions from 1.3.* the 'export = false' does not work. For Grails 2.* works properly
         */
         if (grailsVersion.startsWith('2')) {
-          build(":release:2.0.0") { export = false }
+          build(":release:2.0.3") { export = false }
           build(":rest-client-builder:1.0.2") { export = false }
+          build ":tomcat:$grailsVersion"
         }
       }
 }
