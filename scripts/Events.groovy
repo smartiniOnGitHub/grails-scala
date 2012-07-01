@@ -26,7 +26,7 @@ eventCompileStart = {GantBinding compileBinding ->
 
   ant.taskdef(name: 'generateGroovyStubsForScala', classname: 'org.codehaus.groovy.grails.cli.GenerateStubsTask')
   ant.taskdef(name: 'scalac', classname: 'scala.tools.ant.Scalac', classpathref: "scala.compile.classpath")
-    
+
 
   try {
     def scalaSrcEncoding = buildConfig.scala?.src?.encoding ?: 'UTF-8'
@@ -34,9 +34,9 @@ eventCompileStart = {GantBinding compileBinding ->
     println "[scalaPlugin] Compiling Scala sources from plugins to $pluginClassesDirPath"
     ant.mkdir(dir: pluginClassesDirPath)
     ant.scalac(destdir: pluginClassesDirPath,
-            classpathref: "scala.compile.classpath",
-            encoding: scalaSrcEncoding) {
-        
+      classpathref: "scala.compile.classpath",
+      encoding: scalaSrcEncoding) {
+
       pluginSettings.pluginInfosMap.each { name, pluginInfo ->
         File pluginPath = getPluginDirForName(pluginInfo.name).file
         def newFile = new File("${pluginPath.path}/src/java")
@@ -53,14 +53,14 @@ eventCompileStart = {GantBinding compileBinding ->
     println "[scalaPlugin] Compiling Scala sources to $classesDirPath"
     ant.mkdir(dir: classesDirPath)
     ant.scalac(destdir: classesDirPath,
-        classpathref: "scala.compile.classpath",
-        encoding: scalaSrcEncoding) {
-            if(new File("${basedir}/src/java").exists()) {
-                src(path: "${basedir}/src/java")
-            }
-            if(new File("${basedir}/src/scala").exists()) {
-                src(path: "${basedir}/src/scala")
-            }
+      classpathref: "scala.compile.classpath",
+      encoding: scalaSrcEncoding) {
+      if (new File("${basedir}/src/java").exists()) {
+        src(path: "${basedir}/src/java")
+      }
+      if (new File("${basedir}/src/scala").exists()) {
+        src(path: "${basedir}/src/scala")
+      }
     }
 
   } catch (Exception e) {
