@@ -1,0 +1,14 @@
+h4. Samples
+
+In Plugin sources under the [test|https://github.com/smartiniOnGitHub/grails-scala/tree/master/test/] folder
+there there are some initial unit and integration tests, and even an inline test webapp.
+
+Sample code could be duplicated to avoid unnecessary complexity.
+
+Note that some code is more general than required for tests, but only to show some basic features.
+
+
+h4. Scala documentation
+
+Look at [Scala API|http://www.scala-lang.org/api/current/] , 
+or generic [Scala doc site|http://docs.scala-lang.org/]

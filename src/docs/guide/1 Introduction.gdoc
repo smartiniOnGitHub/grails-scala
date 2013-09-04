@@ -1,0 +1,13 @@
+h1. Grails-Scala
+
+h2. Introduction
+
+This plugin makes it easy to use [Scala|http://www.scala-lang.org/] code in a Grails webapp.
+
+All from standard Groovy / Java code.
+
+
+h4. License
+
+Licensed under the terms of the [Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0]
+

@@ -1,0 +1,12 @@
+h4. History
+
+* September 2013
+** 0.9.2 release
+*** Updated Scala to 2.9.2
+*** My first version (took ownership of the plugin, thanks to the original author), with some cleanup of plugin (removed unnecessary files, and other small adjustments)
+
+* November 2011
+** 0.6.4 release
+*** Updated to Scala 2.9.1
+*** Done by plugin original author
+
