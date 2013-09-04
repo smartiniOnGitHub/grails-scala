@@ -1,14 +1,30 @@
-*.zip
-plugin.xml
-target/
-web-app/css/
-web-app/images/
-web-app/js/
-*.iml
-*.ipr
+.DS_Store
+.hg
+.svn
+.gradle
+.cache
+.metadata
+.settings
+# .classpath
+# .project
+*.log
 *.iws
-*.tmproj
-.classpath
-.project
-.settings/
-.idea
+# *Db.properties
+# *Db.script
+*~*
+# *~
+*.bak
+/*.db
+/*.zip
+/plugin.xml
+/*DB.*
+/*.ser
+/.link_to_grails_plugins/
+/_old/
+/out/
+/private/
+# /server/
+/target/
+/target-eclipse/
+/temp/
+/web-app

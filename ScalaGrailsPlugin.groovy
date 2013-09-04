@@ -1,30 +1,46 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except in
+ * compliance with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 class ScalaGrailsPlugin {
-	def version = "0.6.5.1-SNAPSHOT" // added by set-version
-    // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.2 > *"
-    // the other plugins this plugin depends on
-    def dependsOn = [:]
-    // resources that are excluded from plugin packaging
-    def pluginExcludes = [
-            "grails-app/**",
-			"web-app/css/**",
-			"web-app/images/**",
-			"web-app/js/**",
-			"web-app/WEB-INF/**"
-    ]
-
-    def author = "Vaclav Pech"
-    def authorEmail = ""
+    def version = "2.9.2"
+    def grailsVersion = "2.0 > *"
     def title = "Scala Plugin"
-    def description = 'Compiles Scala sources located under src/scala and src-java before grails kicks in with the grails compilation'
+    def author = "Sandro Martini, originally developed by Vaclav Pech and Domingo Suarez Torres"
+    def authorEmail = "sandro.martini@gmail.com"
+    def description = "Compiles Scala sources located under src/scala and src/java before grails kicks in with the grails compilation"
 
-    // URL to the plugin's documentation
-    def documentation = "http://grails.org/Scala+Plugin"
+    def documentation = "http://smartiniongithub.github.com/grails-scala/"
+
     def license = "APACHE"
-    def organization = [ name: "", url: "" ]
-    def developers = [
-        [ name: "Domingo Suarez Torres", email: "domingo.suarez@gmail.com" ]
+    def issueManagement = [ system: "github", url: "https://github.com/smartiniOnGitHub/grails-scala/issues/" ]
+    def scm = [ url: "https://github.com/smartiniOnGitHub/grails-scala/" ]
+
+    def pluginExcludes = [
+        'src/docs/**',
+        'src/groovy/grails_scala_test/**',
+        'src/java/grails_scala_test/**',
+        'src/scala/grails_scala_test/**',
+        'grails-app/views/error.gsp'
     ]
-    def issueManagement = [ system: "GITHUB", url: "https://github.com/vaclav/grails-scala/issues" ]
-    def scm = [ url: "https://github.com/vaclav/grails-scala" ]
+
+    def developers = [
+        [name: "Vaclav Pech", email: ""],
+        [name: "Domingo Suarez Torres", email: "domingo.suarez@gmail.com" ],
+        [name: "Sandro Martini", email: "sandro.martini@gmail.com"],
+    ]
+
 }
