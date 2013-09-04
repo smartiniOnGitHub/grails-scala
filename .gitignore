@@ -18,14 +18,17 @@ Thumbs.db
 /*.db
 /*.zip
 /plugin.xml
+/*.log
 /*DB.*
 /*.ser
 /.link_to_grails_plugins/
 /_old/
+/bin/
 /out/
 /private/
 # /server/
 /target/
 /target-eclipse/
 /temp/
-/web-app
+/web-app/plugins
+/web-app/WEB-INF/classes
