@@ -35,7 +35,7 @@ grails.project.dependency.resolution = {
     dependencies {
         build   "org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion"
         compile "org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion"
-        compile('org.codehaus.groovy.modules:groovytransforms:0.2') { transitive = false }  // TODO: verify if needed now and if there is an updated version ...
+        compile('org.codehaus.groovy.modules:groovytransforms:0.2') { transitive = false }
     }
 
     plugins {

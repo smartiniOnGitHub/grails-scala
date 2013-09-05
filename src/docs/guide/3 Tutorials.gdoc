@@ -10,5 +10,5 @@ Note that some code is more general than required for tests, but only to show so
 
 h4. Scala documentation
 
-Look at [Scala API|http://www.scala-lang.org/api/current/] , 
+Look at [Scala API|http://www.scala-lang.org/api/current/] ,
 or generic [Scala doc site|http://docs.scala-lang.org/]
