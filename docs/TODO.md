@@ -4,6 +4,10 @@ grails-scala - TODO
 TODO
 ----
 
+- for release 0.9.3 (small improvements/cleanup):
+    + add some tests ...
+    + update Groovy doc files ...
+
 - for release 2.9.2 (my first public release of the plugin):
     + add some Scala test (unit/integration) to ensure that all is good ...
     + verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ...
@@ -35,5 +39,8 @@ DONE
     + add license header in any file ... ok
     + add Groovy doc files ... ok
     + update SCALA_LICENSE, from Scala binary distribution ... ok
+
+- for release 0.9.3 (small improvements/cleanup):
+    + add Thumbs.db in pluginExcludes ... ok
 
 ---------------

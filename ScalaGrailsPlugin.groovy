@@ -16,7 +16,7 @@
  */
 
 class ScalaGrailsPlugin {
-    def version = "0.9.2"
+    def version = "0.9.3"
     def grailsVersion = "2.0 > *"
     def title = "Scala Plugin"
     def author = "Sandro Martini, originally developed by Vaclav Pech and Domingo Suarez Torres"
@@ -34,6 +34,7 @@ class ScalaGrailsPlugin {
         'src/groovy/grails_scala_test/**',
         'src/java/grails_scala_test/**',
         'src/scala/grails_scala_test/**',
+		'**/Thumbs.db',
         'grails-app/views/error.gsp'
     ]
 
