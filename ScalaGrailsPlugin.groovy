@@ -30,11 +30,11 @@ class ScalaGrailsPlugin {
     def scm = [ url: "https://github.com/smartiniOnGitHub/grails-scala/" ]
 
     def pluginExcludes = [
+		'**/Thumbs.db',
         'src/docs/**',
         'src/groovy/grails_scala_test/**',
         'src/java/grails_scala_test/**',
         'src/scala/grails_scala_test/**',
-		'**/Thumbs.db',
         'grails-app/views/error.gsp'
     ]
 
