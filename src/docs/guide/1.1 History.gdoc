@@ -8,5 +8,31 @@ h4. History
 * November 2011
 ** 0.6.4 release
 *** Updated to Scala 2.9.1
+*** Bug-fix release - http://jira.grails.org/browse/GPSCALA-1
 *** Done by plugin original author
 
+
+* Past Releases (Done by plugin original author)
+** 0.6.3
+*** Updated the Scala dependency to 2.9.1
+
+** 0.6.2
+*** Updated the Scala dependency to 2.9.0-1
+*** Optimized the compilation process to be faster
+
+** 0.6.1
+*** Updated the Scala dependency to 2.9.0
+
+** 0.6
+*** Updated the Scala dependency to 2.8.1
+
+** 0.3
+*** Polish and documentation
+
+** 0.2
+*** Bundled Scala 2.7.3 distribution
+*** Ability to switch between SCALA_HOME and the bundled Scala distribution
+*** Optional automatic copy of Scala run-time libs into the project's lib folder after compilation
+
+** 0.1
+*** initial
