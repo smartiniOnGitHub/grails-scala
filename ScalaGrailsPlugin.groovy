@@ -34,8 +34,7 @@ class ScalaGrailsPlugin {
         'src/docs/**',
         'src/groovy/grails_scala_test/**',
         'src/java/grails_scala_test/**',
-        'src/scala/grails_scala_test/**',
-        'grails-app/views/error.gsp'
+        'src/scala/grails_scala_test/**'
     ]
 
     def developers = [
