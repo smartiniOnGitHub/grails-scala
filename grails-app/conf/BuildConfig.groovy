@@ -20,7 +20,8 @@ grails.project.work.dir = "target"
 grails.project.source.level = 1.6
 grails.project.target.level = 1.6
 
-def scalaVersion = '2.9.2'
+def scalaVersion = '2.10.3'
+def scalaSuffixVersion = '_2.10'
 
 grails.project.dependency.resolution = {
 
@@ -29,12 +30,12 @@ grails.project.dependency.resolution = {
 
     repositories {
         grailsCentral()
-        mavenRepo "http://repo.typesafe.com/typesafe/releases/"
+        mavenCentral()
     }
 
     dependencies {
-        build   "org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion"
-        compile "org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion"
+        build  ("org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion")
+        compile("org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion")
         compile('org.codehaus.groovy.modules:groovytransforms:0.2') { transitive = false }
     }
 
