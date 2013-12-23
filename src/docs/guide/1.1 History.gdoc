@@ -1,6 +1,11 @@
 h4. History
 
 * December 2013
+** 0.10.3 release
+*** Updated to Scala-2.10.3
+*** First release for Grails-2.2.x
+
+* December 2013
 ** 0.10.2 release
 *** Updated to Scala-2.10.2 (the same used by Akka-2.2.3)
 *** Last release for Grails-2.0.x
