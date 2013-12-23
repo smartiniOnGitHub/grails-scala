@@ -4,12 +4,6 @@ grails-scala - TODO
 TODO
 ----
 
-- for release 0.10.3 (small improvements/cleanup):
-	- update to Scala-2.10.3 ... ok
-	- update to Grails-2.2.x the plugin ... ok
-	- update to Grails-2.2.x the test webapp (and resources:1.2.1, etc) ...
-	- add some tests ...
-
 - for release 1.0:
     - add some Scala test (unit/integration) to ensure that all is good ...
     - verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ...
@@ -49,6 +43,11 @@ DONE
 	- update to Scala-2.10.2 (the same used by Akka-2.2.3) ... ok
 	- removed the Typesafe Maven repository (no more needed) ... ok
 	- update Groovy doc files ... ok
+
+- for release 0.10.3 (small improvements/cleanup):
+	- update to Scala-2.10.3 ... ok
+	- update to Grails-2.2.x the plugin ... ok
+	- update to Grails-2.2.x the test webapp (and resources:1.2.1, etc) ... ok
 
 - update Groovy doc files and then publish in related web site at GitHUB ...
 
