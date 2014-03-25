@@ -5,7 +5,7 @@ TODO
 ----
 
 - for next release 2.10.4:
-	- update to Scala-2.10.4 ...
+	- update to Scala-2.10.4 ... ok
     - add some Scala test (unit/integration) to ensure that all is good ...
 	- try to use some case class (Scala) from Groovy, using Java/Groovy syntax ...
 	- add ScalaTest (but only in the test webapp), and make some tests using it ...
@@ -51,7 +51,7 @@ DONE
 	- update to Grails-2.2.x the plugin ... ok
 	- update to Grails-2.2.x the test webapp (and resources:1.2.1, etc) ... ok
 
-- update Groovy doc files and then publish in related web site at GitHUB ...
+- update Groovy doc files and then publish in related web site at GitHUB ... ok
 
 
 ---------------
