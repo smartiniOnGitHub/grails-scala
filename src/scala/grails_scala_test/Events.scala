@@ -18,22 +18,19 @@
 package grails_scala_test
 
 /** Sample base class */
-// sealed abstract class Point[T]
-sealed trait Point[T]
+// abstract class Event
+trait Event
 
-/** Sample case class for a Point in a for geo-referentiation
- * Note that here I define its attributes as mutable (with related accessors generated,
- * and this is not a best practice), but just to try even this.
- */
-case class Point2dGeo[T](var lon: T, var lat: T) extends Point[T]
+trait Component {
+	def name: Option[String]
+}
+trait ComponentEvent extends Event {
+	val source: Component
+}
 
-
-/** Sample case class for a Point in a 2d cartesian coordinate system */
-case class Point2d[T](x: T, y: T) extends Point[T]
-
-/** Sample case class for a Point in a 3d cartesian coordinate system */
-case class Point3d[T](x: T, y: T, z: T) extends Point[T]
-
-
-/** Sample case class for a Screen Point, with color */
-case class ScreenPoint(x: Int, y: Int, color: java.awt.Color) extends Point[Int]
+trait Container {
+	def elements: Seq[Component]
+}
+trait ContainerEvent extends Event {
+	val source: Container
+}

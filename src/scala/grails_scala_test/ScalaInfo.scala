@@ -21,6 +21,15 @@ package grails_scala_test
  */
 object ScalaInfo {
 
-// TODO: add methods scalaVersion, scalaCompilerVersion, etc ...
+	/** Returns the Scala version message */
+	def scalaVersionMessage = scala.util.Properties.versionMsg
+
+	/** Returns the Scala version */
+	def scalaVersion = scala.util.Properties.versionNumberString
+
+	/** Returns the Scala Compiler version
+	 * Note that this requires the related library in CLASSPATH at runtime
+	 */
+	def scalaCompilerVersio = scala.tools.nsc.Properties.versionNumberString
 
 }

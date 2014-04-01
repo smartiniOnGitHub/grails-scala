@@ -3,9 +3,18 @@ h4. Samples
 In Plugin sources under the [test|https://github.com/smartiniOnGitHub/grails-scala/tree/master/test/] folder
 there there are some initial unit and integration tests, and even an inline test webapp.
 
-Sample code could be duplicated to avoid unnecessary complexity.
+There are even some Sample Scala sources under [src/scala|https://github.com/smartiniOnGitHub/grails-scala/tree/master/src/scala/] folder
+to ensure that Scala code (many different kind of classes) compiles inside the plugin, 
+but of course that code is excluded when packaging it.
+Note that those Sample Scala sources are used only from the
+[test webapp|https://github.com/smartiniOnGitHub/grails-scala/tree/master/test/webapp/grails-scala-test/], 
+both from Scala code and from Groovy code (using the Java interoperability way).
 
-Note that some code is more general than required for tests, but only to show some basic features.
+Last, to ensure that the plugin is working right, in the
+[test webapp|https://github.com/smartiniOnGitHub/grails-scala/tree/master/test/webapp/grails-scala-test/], 
+there are some Unit Test classes done in Scala that are using [ScalaTest|http://scalatest.org/],
+but to avoid including it as dependency in the plugin, they are included only there.
+And they are not triggered by Grails tests (the test-app command).
 
 
 h4. Scala documentation

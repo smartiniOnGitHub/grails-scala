@@ -17,6 +17,16 @@
 
 package grails_scala_test
 
-/** Sample case class for a Person
- */
-case class Person(firstName: String, lastName: String, age: Int)
+/** Sample base class */
+// sealed abstract class Message[T]
+sealed trait Message[T]
+
+/** Sample case class for a String Message */
+case class StringMessage(msg: String) extends Message[String]
+
+/** Sample case class for a Binary (byte []) Message */
+case class BinaryMessage(msg: Array[Byte]) extends Message[Array[Byte]]
+
+
+/** Sample case class for a generic event Message */
+case class EventMessage(event: Any, timestamp: Long = 0l) extends Message[Any]

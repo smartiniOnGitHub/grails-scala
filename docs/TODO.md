@@ -6,8 +6,8 @@ TODO
 
 - for next release 2.10.4:
 	- update to Scala-2.10.4 ... ok
-    - add some Scala test class to ensure that all is good ...
-	- try to use some case class (Scala) from Groovy, using Java/Groovy syntax ...
+    - add some Scala test class (normal, case, object, trait, abstract, etc) to ensure that Scala code is compiled ... ok
+	- test webapp: use sample classes (Scala) defined in the plugin, but from Groovy (using the Java interoperability way) ...
 	- add ScalaTest and make some tests using it ... ok, but only in the test webapp, and note that the aren't used in Grails test-app command
     - verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ... the compiler is needed to build Scala sources
     - SCALA_LICENSE, verify if it's right to have it there (but in a subfolder), or if move in root in other license-related files ... ok

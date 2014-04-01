@@ -1,10 +1,10 @@
 h4. History
 
-* March 2014
+* April 2014
 ** 2.10.4 release
 *** Updated to Scala-2.10.4
 *** Updated to Grails-2.2.5
-*** Add some Scala code as a sample (in plugin tests and in the test webapp)
+*** Add some Scala code as a sample (but only in plugin sources, and in the test webapp) and show its usage
 
 * December 2013
 ** 0.10.3 release
