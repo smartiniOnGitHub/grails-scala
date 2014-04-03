@@ -19,13 +19,27 @@ package grails_scala_test
 
 /** Sample case class for a Person.
  *
- * @constructor create a new person with a first name, a last name, and age
+ * @constructor create a new person with a first name, a last name, age, and email
  * @param firstName the person's first name
  * @param lastName the person's last name
  * @param age the person's age in years 
+ * @param email the person's email
  */
-case class Person(firstName: String, lastName: String, age: Int) {
+case class Person(firstName: String, lastName: String, age: Int, email: String) {
 	require(age >= 0, "Age must be a positive number")
+	
+	/** Auxiliary constructor.
+	 *
+	 * @constructor Auxiliary constructor to create a new person with a first name, a last name, and some defaults
+	 * @param firstName the person's first name
+	 * @param lastName the person's last name
+	 *
+	 * Note that to use it you must create an instance but using the new operator
+	 * (usually not needed with case classes).
+	 */
+	def this(firstName: String, lastName: String) {
+		this(firstName, lastName, 0, "")
+	}
 }
 
 /** Sample case class for a Person with an optional attribute.
