@@ -210,7 +210,7 @@ class Sample[T](val list: List[Int], val map: Map[String, String], val string: S
 		
 		if (n == 1) false
 		else if (n % 2 == 0) false
-		else (2 until n).forall(d => n % d != 0)
+		else (3 until n by 2).forall(d => n % d != 0)
 	}
 
 	/** Filter the immutable global list (defined in the constructor) to get only numbers that are prime.
