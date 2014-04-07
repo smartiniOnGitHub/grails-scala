@@ -221,4 +221,7 @@ class Sample[T](val list: List[Int], val map: Map[String, String], val string: S
 		filterListByClosure(n => isPrime(n))
 	}
 
+	/** Sample for a Not Implemented method. */
+	def notImplemented(): Unit = ???
+
 }
