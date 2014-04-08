@@ -54,3 +54,60 @@ case class PersonWithFiscalCode(firstName: String, lastName: String, age: Int, f
 	require(age >= 0, "Age must be a positive number")
 }
 
+
+/** Sample class for a Person with Java compatible getters and setters.
+  *
+ * @constructor create a new person with a first name, a last name, bornDate, and a gender
+ * @param firstName the person's first name
+ * @param lastName the person's last name
+ * @param age the person's born date
+ * @param male true if the person is a male, otherwise false
+ *
+ * Note that some attributes are values, while others are mutable, but just to try different combinations
+ * of generated accessors methods, for simpler interoperability with Java.
+ *
+ * Sample usage:
+ *
+ * @example {{{
+   // create instance of sample class
+   val p = new PersonWithBeanProperties("FirstName", "LastName", new Date(), true)
+   println(s"PersonWithBeanProperties instance p = ${p}")
+  
+   p.getFirstName  // FirstName
+   p.setFirstName("NewFirstName")
+   p.getFirstName  // NewFirstName
+   p.getLastName   // LastName
+   p.setLastName("NewLastName")
+   p.getLastName   // NewLastName
+   p.getBornDate   // get the date value
+   // p.setBornDate(new Date())  // impossible, no method defined for this
+   // p.getMale         // impossible, no method defined for this
+   p.isMale             // true
+   // p.setMale(false)  // impossible, no method defined for this
+   // etc ...
+ * }}}
+ *
+ */
+// TODO: check why it doesn't work (compile error) when assigning one of BeanProperty annotations to an instance attribute ...
+// import java.text.SimpleDateFormat
+import java.util.Date
+// import java.util.Locale
+import scala.beans._
+// import scala.reflect.BeanProperty
+// import scala.reflect.BooleanBeanProperty
+// @BeanInfo
+class PersonWithBeanProperties(
+	@BeanProperty var firstName: String, 
+	@BeanProperty var lastName: String, 
+    @BeanProperty val bornDate: Date, 
+	@BooleanBeanProperty val male: Boolean) {
+
+	// @BeanProperty var phoneNumber: String
+
+	// val dateFormat = new SimpleDateFormat("yyyy-MM-dd")
+	// val timestampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+
+	// override def toString: String = "%s %s, born %s, male: %b".format(firstName, lastName, dateFormat.format(bornDate), male)
+	override def toString: String = "%s %s, born %tF, male: %b".format(firstName, lastName, bornDate, male)
+	// override def toString: String = "%s %s, born %3$tY-%3$tm-%3$td %3$tT, male: %b".format(firstName, lastName, bornDate, male)
+}
