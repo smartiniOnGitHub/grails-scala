@@ -73,11 +73,14 @@ class Rational(p: Int, q: Int) {
 	/** Check if it's equal to the given Rational. */
 	def ==(other: Rational) = num * other.den == den * other.num
 
+	/** Check if it's not equal to the given Rational. */
+	def !=(other: Rational) = ! ==(other)
+
 	/** Return a normalized (reduced to minimum values) version of the current rational. */
 	def normalize() = if (den < 0) new Rational(-num, -den) else new Rational(num, den)
 
-	/** Check if it's not equal to the given Rational. */
-	def !=(other: Rational) = ! ==(other)
+	/** Return an absolute version of the current rational (with all components positive). */
+	def absolute() = new Rational(p.abs, q.abs)
 
 	/** Return the negative of the current rational (or multiplicated by -1). */
 	def negative() = new Rational(-p, q)
@@ -99,7 +102,12 @@ class Rational(p: Int, q: Int) {
 	/** Calculates the integer value of division, and the integer remainder, returning both as a tuple. */
 	def valueAsInt() = (num / den, num % den)
 
-// TODO: add a valueAsDouble method that returns a tuple vector (Double value, Boolean exact) ... and test with 10/3, 1/2, 2/5, etc ...
+	/** Calculates a double value of division and a boolean flag that say is the result is exact, returning both as a tuple. */
+	def valueAsDouble() = {
+		// TODO: calculate the right value of Boolean exact ...
+		val exact: Boolean = false
+		((num.toDouble / den.toDouble), exact)
+	}
 
 }
 
@@ -142,6 +150,7 @@ class Rational(p: Int, q: Int) {
    r.power(2)   // 4/25
    r.power(-2)  // 25/4
    h.valueAsInt  // (0,1)
+   h.valueAsDouble  // (0.5,false)  // temp, right value should be (0.5,true)
 
    val r58 = RationalHelper(5, 8)
    val r13 = RationalHelper(1, 3)
@@ -158,9 +167,9 @@ object RationalHelper {
 
 	implicit def int2Rational(x: Int) = new Rational(x)
 
-	implicit def long2Rational(x: Long) = new Rational(x.toInt)
-
+	// implicit def long2Rational(x: Long) = new Rational(x.toInt)
 // TODO: add implicit methods even for double2Rational (scaling it by its decimals) ...
+
 // TODO: check if add even rational2Int and rational2Double ...
 
 	/** Syntactic sugar for creating new Rational instances, without the need to use the new operator. */
