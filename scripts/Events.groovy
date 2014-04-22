@@ -48,7 +48,7 @@ eventCompileStart = {GantBinding compileBinding ->
   try {
     def scalaSrcEncoding = buildConfig.scala?.src?.encoding ?: 'UTF-8'
 
-    println "[scalaPlugin] Compiling Scala sources from plugins to $pluginClassesDirPath"
+    println "[scalaPlugin] Compiling Scala sources from plugin to $pluginClassesDirPath"
     ant.mkdir(dir: pluginClassesDirPath)
     ant.scalac(destdir: pluginClassesDirPath,
       classpathref: "scala.compile.classpath",

@@ -22,6 +22,9 @@ grails.project.source.level = 1.6
 
 grails.plugin.location."scala" = "../../../"
 
+def scalaVersion = '2.10.4'
+def scalaSuffixVersion = '_2.10'
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -44,7 +47,12 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'postgresql:postgresql:9.1-901-1.jdbc4'
-    }
+
+        // add ScalaTest in test scope, just as a sample
+		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
+		test("org.scalatest:scalatest$scalaSuffixVersion:2.1.3")
+		// test("org.scalautils:scalautils$scalaSuffixVersion:2.1.3")
+	}
 
     plugins {
         // compile "org.grails.plugins:spring-security-core:1.2.7.3"
