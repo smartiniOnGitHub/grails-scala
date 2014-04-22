@@ -4,19 +4,6 @@ grails-scala - TODO
 TODO
 ----
 
-- for next release 2.10.4:
-	- update to Scala-2.10.4 ... ok
-    - add some Scala test class (normal, case, object, trait, abstract, BeanProperty annotations, etc) to ensure that Scala code is compiled ... ok
-	- add a ScalaService to be able to get some info on Scala made available by the plugin, and call it in the test webapp ... ok
-	- test webapp: use sample classes (Scala) defined in the plugin, but from Groovy (using the Java interoperability way) ...
-	- add ScalaTest and make some tests using it ... ok, but only in the test webapp, and note that they aren't used in Grails test-app command ... ok
-		- add sample tests both for a Spec and a Suite under unit tests folder (Example*.scala) ... ok
-		- then copied both even under a test/scala folder but renamed in ExampleScala*.scala for simplifying checks on built files ... ok
-    - verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ... no, the compiler is needed to build Scala sources ... ok
-    - SCALA_LICENSE, verify if it's right to have it there (but in a subfolder), or if move in root in other license-related files ... ok
-	- update Groovy doc files ... ok
-
-
 - for 2.11.0:
 	- update to Scala-2.11.0 and its new license ...
 
@@ -67,6 +54,18 @@ DONE
 
 - update Groovy doc files and then publish in related web site at GitHUB ... ok
 - verify if add even ScalaTest, ScalaCheck, or Specs in dependencies for tests ... ok, but only in test webapps (as a sample)
+
+- for next release 2.10.4:
+	- update to Scala-2.10.4 ... ok
+    - add some Scala test class (normal, case, object, trait, abstract, BeanProperty annotations, etc) to ensure that Scala code is compiled ... ok
+	- add a ScalaService to be able to get some info on Scala made available by the plugin, and call it in the test webapp ... ok
+	- test webapp: use sample classes (Scala) defined in the plugin, but from Groovy (using the Java interoperability way) ... ok
+	- add ScalaTest and make some tests using it ... ok, but only in the test webapp, and note that they aren't used in Grails test-app command ... ok
+		- add sample tests both for a Spec and a Suite under unit tests folder (Example*.scala) ... ok
+		- then copied both even under a test/scala folder but renamed in ExampleScala*.scala for simplifying checks on built files ... ok
+    - verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ... no, the compiler is needed to build Scala sources ... ok
+    - SCALA_LICENSE, verify if it's right to have it there (but in a subfolder), or if move in root in other license-related files ... ok
+	- update Groovy doc files ... ok
 
 
 ---------------

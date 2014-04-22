@@ -5,6 +5,7 @@ h4. History
 *** Updated to Scala-2.10.4
 *** Updated to Grails-2.2.5
 *** Add some Scala code as a sample (but only in plugin sources, and in the test webapp) and show its usage
+*** Add ScalaService to get some info on Scala available by the plugin
 
 * December 2013
 ** 0.10.3 release

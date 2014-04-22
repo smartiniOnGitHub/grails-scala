@@ -29,12 +29,31 @@ class ScalaController {
 	def index() {
 		log.info("index - params: $params")
 
+		// get some info from the service (exposed by the plugin)
 		def scalaVersion       = scalaService?.getScalaVersion()
 		def scalaSuffixVersion = scalaService?.getScalaSuffixVersion()
 
+		// test some Scala classes now, and put results in the output map for page:
+		// remember that they are all available even in the Grails Console ...
+		// Note that many of them are available only in dev env with plugin sources,
+		// because they are excluded in the published version of the plugin.
 
 		[
-			scalaVersion: scalaVersion, scalaSuffixVersion: scalaSuffixVersion
+			scalaVersion: scalaVersion, scalaSuffixVersion: scalaSuffixVersion,  // defined and published by the plugin service
+			scalaObjVersionMsg: ScalaInfo.scalaVersionMessage(), // scala object (singleton)
+			scalaObjVersion: ScalaInfo.scalaVersion(), 
+			scalaObjCompilerVersion: ScalaInfo.scalaCompilerVersio(),
+			complex: new Complex(0,1),  // scala class defined in the test webapp
+			rationalHalf: new Rational(1,2),
+			person: new Person('First_Name', 'Last_Name', 20, 'email'),
+			personWithBeanProperties: new PersonWithBeanProperties('First_Name', 'Last_Name', new Date(), true),
+			// personFirstNameFromGetter: new PersonWithBeanProperties('First_Name', 'Last_Name', new Date(), true).getFirstName()
+			sampleEmpty: new Sample(),
+			// sampleEmptyListFiltered: new Sample().filterListByFlag(0),
+			// sampleNotExistentWithDefault: new Sample().valueFromMap('not-existent'),
+			screenPoint: new ScreenPoint(100, 200, null),
+			stringMsg: new StringMessage('Hello from Groovy to a Scala case class extending a trait'),
+			counter: Counter.next()
 		]
 	}
 
