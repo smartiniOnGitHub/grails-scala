@@ -7,6 +7,7 @@ TODO
 - for next release 2.10.4:
 	- update to Scala-2.10.4 ... ok
     - add some Scala test class (normal, case, object, trait, abstract, BeanProperty annotations, etc) to ensure that Scala code is compiled ... ok
+	- add a ScalaService to be able to get some info on Scala made available by the plugin, and call it in the test webapp ... ok
 	- test webapp: use sample classes (Scala) defined in the plugin, but from Groovy (using the Java interoperability way) ...
 	- add ScalaTest and make some tests using it ... ok, but only in the test webapp, and note that they aren't used in Grails test-app command ... ok
 		- add sample tests both for a Spec and a Suite under unit tests folder (Example*.scala) ... ok
