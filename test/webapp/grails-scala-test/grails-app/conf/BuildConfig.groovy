@@ -45,22 +45,22 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-        // runtime 'mysql:mysql-connector-java:5.1.29'
-        // runtime 'postgresql:postgresql:9.1-901-1.jdbc4'
+        // runtime 'mysql:mysql-connector-java:5.1.31'
+        // runtime 'org.postgresql:postgresql:9.3-1102-jdbc41'
 
         // add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.1.3")
-		// test("org.scalautils:scalautils$scalaSuffixVersion:2.1.3")
+		test("org.scalatest:scalatest$scalaSuffixVersion:2.1.7")
+		// test("org.scalautils:scalautils$scalaSuffixVersion:2.1.7")
 	}
 
     plugins {
-        // compile "org.grails.plugins:spring-security-core:1.2.7.3"
+        // compile "org.grails.plugins:spring-security-core:1.2.7.4"
         // compile "org.grails.plugins:mongodb:2.0.1"
 
         runtime ":hibernate:$grailsVersion"
-        runtime ":jquery:1.11.0.1"
-        runtime ":resources:1.2.7"
+        runtime ":jquery:1.11.1"
+        runtime ":resources:1.2.8"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
