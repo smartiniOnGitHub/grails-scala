@@ -1,5 +1,10 @@
 h4. History
 
+* Later 2014
+** xxx release
+*** Updated to Scala-xxx
+*** Fix tests with Grails-2.4
+
 * April 2014
 ** 2.10.4 release
 *** Updated to Scala-2.10.4
