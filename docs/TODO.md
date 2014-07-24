@@ -3,29 +3,27 @@ grails-scala - TODO
 
 TODO
 ----
-- for 2.10.5 (or 2.11.1):
+
+- for 2.11.2:
 	- set new plugin version and update Scala dependencies ...
-	- make the plugin pass tests in the test-webapp24, see errors in not versioned file tests.log ...
-		cls && grails test-app -echoOut > tests.log
-	- add a test webapp made with Grails-2.4.x ... ok
-	- merge changes from the older test webapp (based on Grails-2.2.5) to this new one (based on Grails-2.4.2) ... ok
+	- update to the new (clarified) Scala-2.11.x license ...
 
 
-- for 2.11.1:
-	- update to Scala-2.11.1 and its new license ...
+- for 2.10.5 (if needed):
+	- set new plugin version and update Scala dependencies ...
 
 
 - for other releases:
+	- check if compile even /test/scala sources (if any, in this new folder) in the test environment (in plugin Events), and make some tests ...
 	- check if publish other Scala info in ScalaService or in another (inside the Plugin) ...
 	- run ScalaDoc on Scala sources and see what happens (and fix something, if needed) ...
-	- test webapp: add controller to log/show in page even Scala version ...
 	- test webapp: check if add a (controller and) page with text area to put some Scala code and run it ...
 	- plugin: check if add a (controller and) page with text area to put some Scala code and run it, but with a dedicated flag in Config and by default disabled ...
 	- check if add a command to trigger generation of documentation for Scala sources, using ScalaDoc ...
 	- check if add Grails command scala-console, to get a Scala Console from the shell (if possible) ...
 	- check if add Grails command scala-test-app, to run Scala tests (if given) ...
 	- update to Scala-2.11, and its re-modularized structure, to see if/what dependencies should be changes/updated ...
-    - compile('org.codehaus.groovy.modules:groovytransforms:0.2') ... , verify if it's still needed (and if there is a newer version) ...
+	- compile('org.codehaus.groovy.modules:groovytransforms:0.2') , verify if it's still needed now (and if there is a newer version) ...
 
 
 - etc ...
@@ -62,8 +60,10 @@ DONE
 
 - update Groovy doc files and then publish in related web site at GitHUB ... ok
 - verify if add even ScalaTest, ScalaCheck, or Specs in dependencies for tests ... ok, but only in test webapps (as a sample)
+- test webapp: add controller to log/show in page even Scala version ... ok
+- compile('org.codehaus.groovy.modules:groovytransforms:0.2') , verify if it's needed ... yes it is (at least now) ... ok
 
-- for next release 2.10.4:
+- for 2.10.4:
 	- update to Scala-2.10.4 ... ok
     - add some Scala test class (normal, case, object, trait, abstract, BeanProperty annotations, etc) to ensure that Scala code is compiled ... ok
 	- add a ScalaService to be able to get some info on Scala made available by the plugin, and call it in the test webapp ... ok
@@ -74,6 +74,14 @@ DONE
     - verify at runtime, if it's enough to have only scala-runtime, and not scala-compiler ... no, the compiler is needed to build Scala sources ... ok
     - SCALA_LICENSE, verify if it's right to have it there (but in a subfolder), or if move in root in other license-related files ... ok
 	- update Groovy doc files ... ok
+
+- for 2.10.4.1 (maintenance release for 2.10.4):
+	- stay to Scala-2.10.4 ... ok
+	- add a test webapp made with Grails-2.4.x ... ok
+	- merge changes from the older test webapp (based on Grails-2.2.5) to this new one (based on Grails-2.4.2) ... ok
+	- make the plugin pass tests in the test-webapp24 ... ok
+	- make the plugin pass tests in the original test-webapp ... ok
+	- update (and then publish) Groovy doc files ... ok
 
 
 ---------------
