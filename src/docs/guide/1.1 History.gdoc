@@ -1,5 +1,10 @@
 h4. History
 
+* August 2014
+** 2.11.2 release
+*** Updated to Scala-2.11.2
+*** Updated to ScalaTest-2.2.1 (in test webapps)
+
 * July 2014
 ** 2.10.4.1 release
 *** Stay on Scala-2.10.4

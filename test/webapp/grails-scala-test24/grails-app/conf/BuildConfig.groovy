@@ -25,7 +25,7 @@ grails.project.source.level = 1.6
 
 grails.plugin.location."scala" = "../../../"
 
-def scalaSuffixVersion = '_2.10'
+def scalaSuffixVersion = '_2.11'
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -68,8 +68,8 @@ grails.project.dependency.resolution = {
 
         // add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.1.7")
-		// test("org.scalautils:scalautils$scalaSuffixVersion:2.1.7")
+		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.1")
+		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.1")
     }
 
     plugins {
@@ -77,7 +77,7 @@ grails.project.dependency.resolution = {
 
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
-        compile ":asset-pipeline:1.9.6"
+        compile ":asset-pipeline:1.9.7"
 
         runtime ":hibernate4:4.3.5.4"
         runtime ":database-migration:1.4.0"

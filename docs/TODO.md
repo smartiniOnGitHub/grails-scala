@@ -4,11 +4,6 @@ grails-scala - TODO
 TODO
 ----
 
-- for 2.11.2:
-	- set new plugin version and update Scala dependencies ...
-	- update to the new (clarified) Scala-2.11.x license ...
-
-
 - for 2.10.5 (if needed):
 	- set new plugin version and update Scala dependencies ...
 
@@ -22,7 +17,7 @@ TODO
 	- check if add a command to trigger generation of documentation for Scala sources, using ScalaDoc ...
 	- check if add Grails command scala-console, to get a Scala Console from the shell (if possible) ...
 	- check if add Grails command scala-test-app, to run Scala tests (if given) ...
-	- update to Scala-2.11, and its re-modularized structure, to see if/what dependencies should be changes/updated ...
+	- after update to Scala-2.11 (and its re-modularized structure), check if/what dependencies should be changes/updated ...
 	- compile('org.codehaus.groovy.modules:groovytransforms:0.2') , verify if it's still needed now (and if there is a newer version) ...
 
 
@@ -81,6 +76,12 @@ DONE
 	- merge changes from the older test webapp (based on Grails-2.2.5) to this new one (based on Grails-2.4.2) ... ok
 	- make the plugin pass tests in the test-webapp24 ... ok
 	- make the plugin pass tests in the original test-webapp ... ok
+	- update (and then publish) Groovy doc files ... ok
+
+- for 2.11.2:
+	- set new plugin version and update Scala dependencies ... ok
+	- update to the new (clarified) Scala-2.11.x license ... ok
+	- make the plugin pass tests in all test-webapps, then run and ensure that all is good ... ok
 	- update (and then publish) Groovy doc files ... ok
 
 
