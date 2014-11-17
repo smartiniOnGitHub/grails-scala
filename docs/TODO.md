@@ -4,7 +4,8 @@ grails-scala - TODO
 TODO
 ----
 
-- for 2.10.5 (if needed):
+- for 2.10.5:
+	- make it in a dedicated branch (2.10.x), if needed ...
 	- set new plugin version and update Scala dependencies ...
 
 
@@ -83,6 +84,9 @@ DONE
 	- update to the new (clarified) Scala-2.11.x license ... ok
 	- make the plugin pass tests in all test-webapps, then run and ensure that all is good ... ok
 	- update (and then publish) Groovy doc files ... ok
+
+- for 2.11.4:
+	- do all steps as usual ... ok
 
 
 ---------------

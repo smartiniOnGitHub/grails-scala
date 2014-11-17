@@ -49,8 +49,8 @@ grails.project.dependency.resolution = {
 
         // add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.1")
-		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.1")
+		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.2")
+		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.2")
 	}
 
     plugins {

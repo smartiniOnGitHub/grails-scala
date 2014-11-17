@@ -16,7 +16,7 @@
  */
 
 class ScalaGrailsPlugin {
-    def version = "2.11.2"
+    def version = "2.11.4"
     def grailsVersion = "2.2 > *"
     def title = "Scala Plugin"
     def author = "Sandro Martini, originally developed by Vaclav Pech and Domingo Suarez Torres"

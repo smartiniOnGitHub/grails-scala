@@ -64,27 +64,27 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.31'
         // runtime 'org.postgresql:postgresql:9.3-1102-jdbc41'
-        test "org.grails:grails-datastore-test-support:1.0.1-grails-2.4"
+        test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
 
         // add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.1")
-		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.1")
+		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.2")
+		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.2")
     }
 
     plugins {
-        build ":tomcat:7.0.54"
+        build ":tomcat:7.0.55"
 
         compile ":scaffolding:2.1.2"
-        compile ':cache:1.1.7'
+        compile ':cache:1.1.8'
         compile ":asset-pipeline:1.9.9"
 
-        runtime ":hibernate4:4.3.5.4"
+        runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 
         //compile ":sass-asset-pipeline:1.9.0"
         //compile ":less-asset-pipeline:1.10.0"
-        //compile ":coffee-asset-pipeline:1.9.0"
+        //compile ":coffee-asset-pipeline:1.8.0"
     }
 }

@@ -20,7 +20,7 @@ grails.project.work.dir = "target"
 grails.project.source.level = 1.6
 grails.project.target.level = 1.6
 
-def scalaVersion = '2.11.2'
+def scalaVersion = '2.11.4'
 // def scalaSuffixVersion = '_2.11'  // ok, but not needed here, nor published to webapps ...
 // to keep things simple, remember to update both values inside the related service ...
 
