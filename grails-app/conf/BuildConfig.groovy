@@ -17,8 +17,6 @@
 
 grails.project.work.dir = "target"
 // grails.project.docs.output.dir = 'docs/manual'
-grails.project.source.level = 1.6
-grails.project.target.level = 1.6
 
 def scalaVersion = '2.11.5'
 // def scalaSuffixVersion = '_2.11'  // ok, but not needed here, nor published to webapps ...
@@ -35,8 +33,9 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        build  ("org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion")
-        compile("org.scala-lang:scala-compiler:$scalaVersion", "org.scala-lang:scala-library:$scalaVersion")
+        String[] compilerAndLibrary = ['compiler', 'library'].collect { "org.scala-lang:scala-$it:$scalaVersion" }
+        build  (compilerAndLibrary)
+        compile(compilerAndLibrary)
         compile('org.codehaus.groovy.modules:groovytransforms:0.2') { transitive = false }
     }
 
@@ -47,5 +46,4 @@ grails.project.dependency.resolution = {
     }
 }
 
-grails.release.scm.enabled = false
 grails.project.repos.default = "grailsCentral"

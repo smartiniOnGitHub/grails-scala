@@ -24,13 +24,9 @@ import javax.annotation.PreDestroy
  * <br/>
  * It has default scope (singleton), but in a not transactional way.
  */
-class ScalaService 
+class ScalaService
 {
 	static transactional = false  // transactional behaviour not needed here ...
-
-
-	def grailsApplication
-
 
 	/**
 	 * Initialization, automatically called after creation, via the PostConstruct annotation.
@@ -58,22 +54,20 @@ class ScalaService
 	/**
 	 * Returns the Scala version used and published by the plugin.
 	 *
-	 * @return the Scala version, as a String
+	 * @return the Scala version
 	 */
 	String getScalaVersion() {
 		// return BuildConfig.scalaVersion  // not possible in a plugin
-		return "2.11.5"  // to keep it simple, duplicate the value here ...
+		"2.11.5"  // to keep it simple, duplicate the value here ...
 	}
 
 	/**
 	 * Returns the Scala suffix with the major version (normally used by build tools).
 	 *
-	 * @return the Scala suffix version, as a String
+	 * @return the Scala suffix version
 	 */
 	String getScalaSuffixVersion() {
 		// return BuildConfig.scalaSuffixVersion  // not possible in a plugin
-		return "_2.11"  // to keep it simple, duplicate the value here ...
+		"_2.11"  // to keep it simple, duplicate the value here ...
 	}
-
-
 }
