@@ -21,7 +21,7 @@ class ScalaGrailsPlugin {
     def title = "Scala Plugin"
     def author = "Sandro Martini, originally developed by Vaclav Pech and Domingo Suarez Torres"
     def authorEmail = "sandro.martini@gmail.com"
-    def description = "Compiles Scala sources located under src/scala and src/java before grails kicks in with the grails compilation"
+    def description = "Compiles Scala sources located under src/scala and src/java before Grails kicks in with the Grails compilation"
 
     def documentation = "http://smartiniongithub.github.com/grails-scala/"
 
@@ -38,9 +38,8 @@ class ScalaGrailsPlugin {
     ]
 
     def developers = [
-        [name: "Vaclav Pech", email: ""],
+        [name: "Vaclav Pech"],
         [name: "Domingo Suarez Torres", email: "domingo.suarez@gmail.com" ],
         [name: "Sandro Martini", email: "sandro.martini@gmail.com"],
     ]
-
 }

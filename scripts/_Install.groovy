@@ -15,8 +15,4 @@
  * limitations under the License.
  */
 
-// def env = ant.property(environment: "env")
-def env = System.getProperty("grails.env")
-
-ant.mkdir(dir: "${basedir}/src/scala")
-// ant.mkdir(dir: "${basedir}/test/scala")
+ant.mkdir(dir: "$basedir/src/scala")

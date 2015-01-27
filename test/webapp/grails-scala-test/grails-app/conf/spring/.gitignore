@@ -18,8 +18,7 @@
 *~*
 # *~
 *.bak
-Thumbs.db
-/*.db
+*.db
 /*.zip
 /plugin.xml
 /*DB.*
