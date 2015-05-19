@@ -25,7 +25,7 @@ grails.project.source.level = 1.6
 
 grails.plugin.location."scala" = "../../../"
 
-def scalaSuffixVersion = '_2.11'
+def scalaSuffixVersion = '_2.10'
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required

@@ -22,7 +22,7 @@ grails.project.source.level = 1.6
 
 grails.plugin.location."scala" = "../../../"
 
-def scalaSuffixVersion = '_2.11'
+def scalaSuffixVersion = '_2.10'
 
 grails.project.dependency.resolution = {
     inherits "global"

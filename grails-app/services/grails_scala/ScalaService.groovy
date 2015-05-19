@@ -58,7 +58,7 @@ class ScalaService
 	 */
 	String getScalaVersion() {
 		// return BuildConfig.scalaVersion  // not possible in a plugin
-		"2.11.5"  // to keep it simple, duplicate the value here ...
+		"2.10.5"  // to keep it simple, duplicate the value here ...
 	}
 
 	/**
@@ -68,6 +68,6 @@ class ScalaService
 	 */
 	String getScalaSuffixVersion() {
 		// return BuildConfig.scalaSuffixVersion  // not possible in a plugin
-		"_2.11"  // to keep it simple, duplicate the value here ...
+		"_2.10"  // to keep it simple, duplicate the value here ...
 	}
 }
