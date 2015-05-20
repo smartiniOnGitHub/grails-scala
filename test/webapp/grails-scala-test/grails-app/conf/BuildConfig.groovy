@@ -40,8 +40,6 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-		// test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
-
 		// add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
 		test("org.scalatest:scalatest$scalaSuffixVersion:$scalatestVersion")
@@ -54,9 +52,5 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.14"
 
         build ":tomcat:$grailsVersion"
-
-		// test(":spock:0.7") {
-		// 	exclude "spock-grails-support"
-		// }
     }
 }
