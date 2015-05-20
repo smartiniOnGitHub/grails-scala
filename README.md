@@ -1,7 +1,7 @@
 scala
 =====
 
-This is a Grails Plugin that enables the use of Scala code in Grails Web projects.
+This is a Grails Plugin that enable the usage of Scala code in Grails Web projects.
 
 
 Distribution
@@ -25,15 +25,19 @@ In BuildConfig.groovy of the webapp, under the plugins section (at the end of th
 
     compile ":scala:<version>"
 
-then run `grails compile` and the plugin should be installed. In case of errors during plugin installation, set log level to 'warn' in BuildConfig.groovy to get more information, and retry. Instead of the compile it's possible even to use runtime, and in that case simply running a Grails console should be enough.
+then run grails refresh-dependencies, grails clean , then grails compile , and the plugin should be installed.
+In case of Errors during plugin installation, Set log level to 'warn' in BuildConfig.groovy to get more information, and retry.
+Instead of the compile it's possible even to use runtime, and in that case simply running a grails console should be enough.
 
 
 Documentation
 =============
 
-See the Plugin documentation (sources under src/docs/), or the "live" version here: [grails-scala docs](http://smartiniongithub.github.com/grails-scala/)
+See the Plugin documentation (sources under src/docs/), or the "live" version here:
+[grails-scala docs](http://smartiniongithub.github.com/grails-scala/)
 
-Home Page for the project (and sources) on GitHUB: [grails-scala](https://github.com/smartiniOnGitHub/grails-scala/)
+Home Page for the project (and sources) on GitHUB:
+[grails-scala](https://github.com/smartiniOnGitHub/grails-scala/)
 
 
 License

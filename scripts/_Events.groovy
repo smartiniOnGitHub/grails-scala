@@ -28,6 +28,10 @@ import org.codehaus.gant.GantBinding
  * or Java classes.
  */
 
+// def env = ant.property(environment: "env")
+def env = System.getProperty("grails.env")
+
+
 /**
  * Hooks to the compile grails event
  */
@@ -36,6 +40,8 @@ eventCompileStart = {GantBinding compileBinding ->
 		return
 	}
 
+	// ant.echo message: "[scalaPlugin] Grails environment is $env"
+
 	ant.path(id: "scala.compile.classpath") {
 		path(refid: "grails.compile.classpath")
 	}
@@ -43,43 +49,42 @@ eventCompileStart = {GantBinding compileBinding ->
 	ant.taskdef(name: 'generateGroovyStubsForScala', classname: 'org.codehaus.groovy.grails.cli.GenerateStubsTask')
 	ant.taskdef(name: 'scalac', classname: 'scala.tools.ant.Scalac', classpathref: "scala.compile.classpath")
 
+
 	try {
 		def scalaSrcEncoding = buildConfig.scala?.src?.encoding ?: 'UTF-8'
 
 		println "[scalaPlugin] Compiling Scala sources from plugin to $pluginClassesDirPath"
 		ant.mkdir(dir: pluginClassesDirPath)
-		ant.scalac(classpathref: "scala.compile.classpath",
-		           destdir:       pluginClassesDirPath,
-		           encoding:      scalaSrcEncoding) {
+		ant.scalac(destdir: pluginClassesDirPath, classpathref: "scala.compile.classpath", encoding: scalaSrcEncoding) {
 			pluginSettings.pluginInfosMap.each { name, pluginInfo ->
 				File pluginPath = getPluginDirForName(pluginInfo.name).file
-				def newFile = new File(pluginPath.path, "src/java")
+				def newFile = new File("${pluginPath.path}/src/java")
 				if (newFile.directory) {
-					src(path: newFile.path)
+					src(path: "${newFile.path}")
 				}
-				newFile = new File(pluginPath.path, "src/scala")
+				newFile = new File("${pluginPath.path}/src/scala")
 				if (newFile.directory) {
-					src(path: newFile.path)
+					src(path: "${newFile.path}")
 				}
 			}
 		}
 
 		println "[scalaPlugin] Compiling Scala sources to $classesDirPath"
 		ant.mkdir(dir: classesDirPath)
-		ant.scalac(classpathref: "scala.compile.classpath",
-		           destdir:       classesDirPath,
-		           encoding:      scalaSrcEncoding) {
-			['java', 'scala'].each { String dir ->
-				File src = new File(basedir, 'src/' + dir)
-				if (src.exists()) {
-					src(path: src)
-				}
+		ant.scalac(destdir: classesDirPath, classpathref: "scala.compile.classpath", encoding: scalaSrcEncoding) {
+			if (new File("${basedir}/src/java").exists()) {
+				src(path: "${basedir}/src/java")
+			}
+			if (new File("${basedir}/src/scala").exists()) {
+				src(path: "${basedir}/src/scala")
 			}
 		}
-	} catch (e) {
-		ant.fail(message: "Could not compile Scala sources: ${e.class.simpleName}: $e.message")
+
+	} catch (Exception e) {
+		ant.fail(message: "Could not compile Scala sources: " + e.class.simpleName + ": " + e.message)
 	}
 }
+
 
 /**
  * Detects whether we're compiling the scala plugin itself

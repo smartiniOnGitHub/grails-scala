@@ -16,7 +16,7 @@
  */
 
 class ScalaGrailsPlugin {
-    def version = "2.11.7-snapshot"
+    def version = "2.11.7-SNAPSHOT"
     def grailsVersion = "2.2 > *"
     def title = "Scala Plugin"
     def author = "Sandro Martini, originally developed by Vaclav Pech and Domingo Suarez Torres"
@@ -38,7 +38,7 @@ class ScalaGrailsPlugin {
     ]
 
     def developers = [
-        [name: "Vaclav Pech"],
+        [name: "Vaclav Pech", email: ""],
         [name: "Domingo Suarez Torres", email: "domingo.suarez@gmail.com" ],
         [name: "Sandro Martini", email: "sandro.martini@gmail.com"],
     ]

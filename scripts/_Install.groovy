@@ -15,4 +15,5 @@
  * limitations under the License.
  */
 
-ant.mkdir(dir: "$basedir/src/scala")
+ant.mkdir(dir: "${basedir}/src/scala")
+// ant.mkdir(dir: "${basedir}/test/scala")

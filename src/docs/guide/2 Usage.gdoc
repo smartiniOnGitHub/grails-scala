@@ -1,13 +1,16 @@
 h4. Installing the plugin
 
-Configure the plugin as a dependency in the `plugins` block in @BuildConfig.groovy@:
+First you need to install the plugin into a Grails application:
+using the recommended way, configure it as a dependency in @BuildConfig.groovy@:
 {code}
 plugins {
-    ...
     compile ':scala:<plugin version>'
 }
 {code}
 
 h4. Requirements
 
-* Scala (as specified in plugin descriptor) and related dependencies, all downloaded from the Central Maven Repository (that must be enabled).
+* Scala (as specified in plugin descriptor) and related dependencies,
+all downloaded from the Central Maven Repository (that must be enabled).
+
+
