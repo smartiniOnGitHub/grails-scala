@@ -22,7 +22,8 @@ grails.project.source.level = 1.6
 
 grails.plugin.location."scala" = "../../../"
 
-def scalaSuffixVersion = '_2.10'
+def scalaSuffixVersion = '_2.11'
+def scalatestVersion   = '2.2.3'
 
 grails.project.dependency.resolution = {
     inherits "global"
@@ -43,8 +44,8 @@ grails.project.dependency.resolution = {
 
 		// add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.2")
-		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.2")
+		test("org.scalatest:scalatest$scalaSuffixVersion:$scalatestVersion")
+		// test("org.scalactic:scalactic$scalaSuffixVersion:$scalatestVersion")
 	}
 
     plugins {

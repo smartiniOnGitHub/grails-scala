@@ -25,7 +25,7 @@ grails.project.source.level = 1.7
 
 grails.plugin.location."scala" = "../../../"
 
-def scalaSuffixVersion = '_2.10'
+def scalaSuffixVersion = '_2.11'
 def scalatestVersion   = '2.2.3'
 
 grails.project.fork = [
@@ -73,7 +73,6 @@ grails.project.dependency.resolution = {
     plugins {
         build ":tomcat:7.0.55.2"
 
-        // compile ":asset-pipeline:2.1.4"  // or try with the last 2.1.x: 2.1.5 ...
         compile ":asset-pipeline:2.2.0"
         compile ":cache:1.1.8"
         compile ":scaffolding:2.1.2"

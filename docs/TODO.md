@@ -4,10 +4,11 @@ grails-scala - TODO
 TODO
 ----
 
-- for 2.11.6 (maintenance over 2.11.x):
-	- update scala license with that from Scala 2.11.x distribution ...
+- for 2.11.7 (maintenance, from master or from branch 2.11.x and then merge/align both):
+	- fix problems caused by last cleanup ...
+	- update Plugin and Scala release to 2.11.7 ...
+	- use updated groovytransforms to remove Scala deprecations, and update to the same Groovy release used in the Grails release used by the plugin ...
 	- check if add even Scala reflection module ...
-	- update groovytransforms to remove Scala deprecations, and update to the same Groovy release used in the Grails release used by the plugin ...
 	- do all steps as usual ...
 
 
@@ -101,10 +102,16 @@ DONE
 	- merge cleanup from Burt ... ok
 	- do all steps as usual ... no, skip this version and publish a new version, aligned with next version of Scala
 
-- for 2.10.5:
-	- make it in a dedicated branch (2.10.x), if needed ... no, not needed at the moment (I'll create it if/when needed, from this tag)
+- for 2.10.5 (maintenance in branch 2.10.x):
+	- make it in a dedicated branch (2.10.x), if needed ... ok, but created from latest stable tag (2.11.5), because something in previous cleanup generates some problem (to be fixed in master branch)
 	- update scala license with that from Scala 2.10.x distribution ... ok
 	- set new plugin version and update Scala dependencies ... ok
+
+- for 2.11.6 (maintenance in branch 2.11.x):
+	- update scala license with that from Scala 2.11.x distribution ... ok
+	- check if add even Scala reflection module ... maybe later (if needed)
+	- update groovytransforms to remove Scala deprecations, and update to the same Groovy release used in the Grails release used by the plugin ... in next release
+	- do all steps as usual ... ok
 
 
 ---------------

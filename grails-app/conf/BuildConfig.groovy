@@ -18,8 +18,8 @@
 grails.project.work.dir = "target"
 // grails.project.docs.output.dir = 'docs/manual'
 
-def scalaVersion = '2.10.5'
-// def scalaSuffixVersion = '_2.10'  // ok, but not needed here, nor published to webapps ...
+def scalaVersion = '2.11.6'
+// def scalaSuffixVersion = '_2.11'  // ok, but not needed here, nor published to webapps ...
 // to keep things simple, remember to update both values inside the related service ...
 
 grails.project.dependency.resolution = {
