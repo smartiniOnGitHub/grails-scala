@@ -20,12 +20,13 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
-grails.project.target.level = 1.6
-grails.project.source.level = 1.6
+grails.project.target.level = 1.7
+grails.project.source.level = 1.7
 
 grails.plugin.location."scala" = "../../../"
 
 def scalaSuffixVersion = '_2.11'
+def scalatestVersion   = '2.2.3'
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -61,30 +62,24 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.31'
-        // runtime 'org.postgresql:postgresql:9.3-1102-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
 
         // add ScalaTest in test scope, just as a sample
 		// note that this must be aligned (but by hand) with the Scala version published by the plugin ...
-		test("org.scalatest:scalatest$scalaSuffixVersion:2.2.2")
-		// test("org.scalactic:scalactic$scalaSuffixVersion:2.2.2")
+		test("org.scalatest:scalatest$scalaSuffixVersion:$scalatestVersion")
+		// test("org.scalactic:scalactic$scalaSuffixVersion:$scalatestVersion")
     }
 
     plugins {
-        build ":tomcat:7.0.55"
+        build ":tomcat:7.0.55.2"
 
+        // compile ":asset-pipeline:2.1.4"  // or try with the last 2.1.x: 2.1.5 ...
+        compile ":asset-pipeline:2.2.0"
+        compile ":cache:1.1.8"
         compile ":scaffolding:2.1.2"
-        compile ':cache:1.1.8'
-        compile ":asset-pipeline:2.0.20"
 
-        runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
+        runtime ":hibernate4:4.3.8.1"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
-
-        //compile ":sass-asset-pipeline:1.9.2"
-        //compile ":less-asset-pipeline:1.10.0"
-        //compile ":coffee-asset-pipeline:1.8.0"
     }
 }

@@ -1,5 +1,17 @@
 h4. History
 
+* May 2015
+** 2.11.6 release
+*** Updated to Scala-2.11.6
+*** Updated to ScalaTest-2.2.3 (in test webapps)
+*** Reverted last cleanup here
+
+* May 2015
+** 2.10.5 release
+*** Updated to Scala-2.10.5 (latest and probably last in 2.10.x line)
+*** Updated to ScalaTest-2.2.3 (in test webapps)
+*** Reverted last cleanup here
+
 * January 2015
 ** 2.11.5 release
 *** Updated to Scala-2.11.5
