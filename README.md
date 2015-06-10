@@ -39,6 +39,10 @@ See the Plugin documentation (sources under src/docs/), or the "live" version he
 Home Page for the project (and sources) on GitHUB:
 [grails-scala](https://github.com/smartiniOnGitHub/grails-scala/)
 
+Note that this plugin uses the utility jar groovytransforms, since 0.3 hosted at JCenter (BinTray):
+[groovytransforms](http://dl.bintray.com/smartiniontray/releases/)
+and that repository has been added manually in Plugin configuration (because the Plugin uses a legacy Grails release).
+
 
 License
 =======
