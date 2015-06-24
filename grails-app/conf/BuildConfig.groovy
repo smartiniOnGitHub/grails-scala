@@ -30,6 +30,7 @@ grails.project.dependency.resolution = {
     repositories {
         grailsCentral()
         mavenCentral()
+		mavenRepo "https://repo.grails.org/grails/plugins" 
 		// jcenter()  // ok in Grails 2.4 or later, so add it manually for now ...
 		mavenRepo("http://dl.bintray.com/smartiniontray/releases/")
     }
